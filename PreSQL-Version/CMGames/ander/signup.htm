@@ -1,0 +1,30 @@
+<form action='/newuser.php' method='post'>
+Name:<input type='text' name='rname'>
+Username:<input type='text' name='uname' maxlength=12><br>
+Password: <input type='password' name='pwd' / maxlength=12>
+Confirm Password: <input type='password' name='cpwd' /><br>
+Email<input type='text' name='email'>
+Confirm Email<input type='text' name='cmail'><br>
+Would you like to be notified when your events reach Critical Mass:
+<select name='NotForEvents'> 
+<option value='YES'>Yes</option>
+<option value='No'>No</Option>
+</Select>
+How should league game/critical mass notices be sent you:
+<select name='NotForm' onchange='this.form.CellNo.disabled=false;'>
+<option value='email' >Email Above</option>
+<option value='@pcs.rogers.com'>Rogers Wireless</option>
+<option value='@fido.ca'>Fido</option>
+<option value='@msg.telus.com'>Telus</option>
+<option value='@txt.bell.ca'>Bell Mobility</option>
+<option value='@msg.koodomobile.com'>Kudo Mobile</option>
+<option value='@text.mtsmobility.com'>MTS</option>
+<option value='@txt.bell.ca'>President's Choice</option>
+<option value='@sms.sasktel.com'>Sasktel</option>
+<option value='@txt.bell.ca'>Solo</option>
+<option value='@vmobile.ca'>Virgin</option>
+</select>
+<span style='color: green' title='CMGames is not directly connected to the SMS system... instead we use the SMS backdoors of individual Canadain providers to text our notification.  In order to do this we need to know which backdoor to send texts too'>Why?</span> <br>
+Cell Number(########## - no -'s or ()'s please): <input type='text' name='CellNo' disabled=true>
+<input type='submit' value='Submit'>
+</form>
